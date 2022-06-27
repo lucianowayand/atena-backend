@@ -1,12 +1,10 @@
 # Desafio de admissão - Atena.io
-Servidor implementado utilizando `Node.js` + `Express` utilizando `PostgreSQL` como banco de dado e o `Prisma ORM` para facilitar o acesso e edição do banco de dados
+Servidor implementado utilizando `Node.js` + `Express` utilizando `PostgreSQL` como banco de dados e o `Prisma ORM` para facilitar o acesso e edição do banco de dados
 
 ## Dependências
 
 ### Docker
-Para facilitar a montagem do servidor, montei uma _Dockerização_ do programa para facilitar a montagem do programa
-
-Logo, é necessário ter instalado:
+Para facilitar a montagem do servidor, montei uma _Dockerização_ do programa para facilitar sua montagem. Logo, é necessário ter instalado:
 * Docker
 * Docker Compose
 
