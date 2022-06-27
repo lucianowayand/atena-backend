@@ -10,19 +10,5 @@ services:
     ports:
       - '5432:5432'
 
-  app:
-    image: node:lts
-    stdin_open: true
-    build: 
-      context: .
-      dockerfile: Dockerfile
-    depends_on:
-      - postgres
-    ports:
-      - "5000:5000"
-    restart: always
-    volumes:
-      - ./:/app
-
 volumes:
   postgres:
