@@ -1,15 +1,16 @@
 GET http://localhost:5000/user
 
 POST http://localhost:5000/user
+Content-Type: application/json
 
 {
 	"data": {
-		"email": "s@gmail.com",
-		"name": "Gabriel",
-		"surname": "Junkes",
-		"password": "Thiago",
+		"email": "luciano@gmail.com",
+		"name": "Luciano",
+		"surname": "Abreu",
+		"password": "123",
 		"cpf": "222.222.222-22",
-		"followingNews": false,
+		"followingNews": true,
 		"followingSales": false,
 		"city": "Joinville",
 		"state": "SC",
@@ -20,4 +21,4 @@ POST http://localhost:5000/user
 	}
 }
 
-DELETE http://localhost:5000/user/2
+DELETE http://localhost:5000/user/9

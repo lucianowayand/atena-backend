@@ -44,7 +44,7 @@ router.delete('/:id', async (req, res) => {
             }
         })
         res.status(200).json({
-            message: (`User ${user.email} deleted`)
+            message: (`User deleted`)
         })
     } catch(error){
         res.status(400).json({
