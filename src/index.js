@@ -1,6 +1,7 @@
 import express from 'express'
 import bodyParser from 'body-parser';
-import UserController from './controllers/user.js';
+
+import userRoutes from './routes/user.js'
 
 const app = express()
 const port = process.env.PORT || 5000;
@@ -14,7 +15,8 @@ app.get('/', (req, res) => {
     })
 })
 
-app.get('/user', UserController.getAllUsers)
+app.use('/user', userRoutes)
+
 
 app.listen(port)
 console.log('Application running in http://localhost:'+String(port))
