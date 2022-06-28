@@ -38,18 +38,17 @@ router.post('/', async (req, res, next) => {
 
 router.delete('/:id', async (req, res) => {
     try{
-        const id = req.params
         const user = await prisma.user.delete({
             where:{
-                id: Number(id)
+                id: Number(req.params.id)
             }
         })
-        res.status(400).json({
-            user
+        res.status(200).json({
+            message: (`User ${user.email} deleted`)
         })
     } catch(error){
         res.status(400).json({
-            message: "Couldn't delete user"
+            message: "Couldn't delete user:", error
         })
     }
     
