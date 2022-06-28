@@ -1,0 +1,23 @@
+GET http://localhost:5000/user
+
+POST http://localhost:5000/user
+
+{
+	"data": {
+		"email": "s@gmail.com",
+		"name": "Gabriel",
+		"surname": "Junkes",
+		"password": "Thiago",
+		"cpf": "222.222.222-22",
+		"followingNews": false,
+		"followingSales": false,
+		"city": "Joinville",
+		"state": "SC",
+		"cep": "11111-111",
+		"fullAddress": "Rua da rua",
+		"addressNumber": "123"
+	
+	}
+}
+
+DELETE http://localhost:5000/user/2
