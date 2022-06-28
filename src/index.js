@@ -10,13 +10,8 @@ const jsonParser = bodyParser.json()
 
 app.use(jsonParser)
 
-app.get('/', (req, res) => {
-    res.status(200).send({
-        message:'You got me!'
-    })
-})
-
 app.use('/user', userRoutes)
+app.use('/auth', authRoutes)
 
 
 app.listen(port)
