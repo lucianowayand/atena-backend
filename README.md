@@ -22,6 +22,7 @@ docker compose up --build
 ### Servidor - Express
 Durante a primeira montagem precisamos executar as migrações e comandos referente ao prisma, em ordem são:
 ```
+npm install
 npx prisma generate
 npx prisma migrate dev
 node prisma/seed.js
