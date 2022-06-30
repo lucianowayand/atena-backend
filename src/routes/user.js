@@ -21,18 +21,26 @@ router.get('/', async (_req, res) => {
 })
     
 router.post('/', async (req, res, next) => {
-    try{
-        let values = req.body.data
-        values.password = bcrypt.hashSync(values.password, 8)
-        const user = await prisma.user.create({
-            data: values
-        })
-        res.status(200).json({user})
-    } catch(error) {
-        res.status(400).json({
-            message: "Email already in use"
+    let values = req.body
+    
+    const existingUser = await prisma.user.findUnique({
+        where: {
+            email
+        }
+    })
+
+    if(existingUser){
+        return res.status(409).json({
+            message:"Email already registered"
         })
     }
+
+    values.password = bcrypt.hashSync(values.password, 8)
+    const user = await prisma.user.create({
+        data: values
+    })
+    return res.status(200).json({user})
+    
     
 })
 
