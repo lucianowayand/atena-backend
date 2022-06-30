@@ -6,7 +6,7 @@ Para facilitar a montagem do servidor, montei uma _Dockerização_ do banco de d
 * Docker
 * Docker Compose
 
-Neste momento removi o servidor `express` do docker para facilitar a execução de comandos referentes ao banco de dados, por este motivo o `npm` ou `yarn` são necessários para executar o programa
+Neste momento removi o servidor `express` do docker para facilitar a execução de comandos referentes ao banco de dados, por este motivo o `npm` ou `yarn` são necessários para executar o programa, também pode-se considerar o `nodemon` uma dependencia visto que para funcionar ele deve ser instalado através do comando `npm install -g nodemon` 
 
 ## Executando 
 ### Banco de dados - Docker
