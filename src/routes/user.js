@@ -25,7 +25,7 @@ router.post('/', async (req, res, next) => {
     
     const existingUser = await prisma.user.findUnique({
         where: {
-            email
+            email: values.password
         }
     })
 
