@@ -10,5 +10,19 @@ services:
     ports:
       - '5432:5432'
 
+  atena-backend:
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: atena-backend
+    depends_on: 
+      - postgres
+    ports:
+      - "5000:5000"
+    restart: always
+    volumes:
+      - ./:/app
+
 volumes:
   postgres:
