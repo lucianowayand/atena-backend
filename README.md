@@ -1,4 +1,4 @@
-# Desafio de admissão - Atena.io
+# Desafio de admissão - Fullstack
 Servidor implementado utilizando `Node.js` + `Express` utilizando `PostgreSQL` como banco de dados e o `Prisma ORM` para facilitar o acesso e edição do banco de dados.
 
 Está incluso na pasta requests arquivos http de execução de requests, para serem executados usando o Rest client ou o programa Insomnia
